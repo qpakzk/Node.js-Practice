@@ -18,3 +18,7 @@ $ uglifyjs pretty.js -m -o pretty.min.js
 ```
 $ npm install jade --save
 ```
+## post
+```
+$ npm install body-parser
+```
