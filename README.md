@@ -1,24 +1,8 @@
-# server-sided-javascript-nodejs
-- self study by Sangwon Hong
-- lecture link : https://opentutorials.org/course/2136
-- repository : https://github.com/egoing/server_side_javascript_tutorials
+# Study Node.js
+## ./Node.js_Programming_for_Modern_Web
+- sample source code in 『모던 웹을 위한 Node.js 프로그래밍』
 
-## underscore.js
-```
-$ npm install underscore --save
-```
-
-## pretty.js
-```
-$ npm install uglify-js -g
-$ uglifyjs pretty.js
-$ uglifyjs pretty.js -m -o pretty.min.js
-```
-## install jade 
-```
-$ npm install jade --save
-```
-## post
-```
-$ npm install body-parser
-```
+## ./server_side_javascript
+- sample source code in egoing's course in opentutorials
+	- course link : https://opentutorials.org/course/2136
+	- repository link : https://github.com/egoing/server_side_javascript_tutorials
