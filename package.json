@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/qpakzk/server_side_javascript#readme",
   "dependencies": {
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "underscore": "^1.9.1"
   }
 }
