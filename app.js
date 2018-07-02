@@ -1,6 +1,12 @@
 const express = require('express');
 const app = express();
+app.set('view engine', 'jade');
+app.set('views', './views');
 app.use(express.static('public'));
+app.locals.pretty = true;
+app.get('/template', (req, res) => {
+    res.render('temp', { time: Date(), title: "Jade" });
+});
 app.get('/', (req, res) => {
     res.send('Hello home page!');
 });
