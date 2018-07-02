@@ -22,7 +22,7 @@ app.get('/form', (req, res) => {
     res.render('form');
 });
 
-app.get('/topic', (req, res) => {
+app.get('/topic/:id', (req, res) => {
     var topics = [
         "JavaScript is ...",
         "Nodejs is ...",
@@ -30,10 +30,10 @@ app.get('/topic', (req, res) => {
     ];
 
     var output = `
-        <a href="/topic?id=0">JavaScript</a><br>
-        <a href="/topic?id=1">Nodejs</a><br>
-        <a href="/topic?id=2">Express</a><br><br>
-        ${topics[req.query.id]}
+        <a href="/topic/0">JavaScript</a><br>
+        <a href="/topic/1">Nodejs</a><br>
+        <a href="/topic/2">Express</a><br><br>
+        ${topics[req.params.id]}
     `;
     res.send(output);
 });
