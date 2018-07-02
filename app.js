@@ -4,9 +4,27 @@ app.set('view engine', 'jade');
 app.set('views', './views');
 app.use(express.static('public'));
 app.locals.pretty = true;
+
+app.get('/topic', (req, res) => {
+    var topics = [
+        "JavaScript is ...",
+        "Nodejs is ...",
+        "Express is ..."
+    ];
+
+    var output = `
+        <a href="/topic?id=0">JavaScript</a><br>
+        <a href="/topic?id=1">Nodejs</a><br>
+        <a href="/topic?id=2">Express</a><br><br>
+        ${topics[req.query.id]}
+    `;
+    res.send(output);
+});
+
 app.get('/template', (req, res) => {
     res.render('temp', { time: Date(), title: "Jade" });
 });
+
 app.get('/', (req, res) => {
     res.send('Hello home page!');
 });
@@ -37,7 +55,8 @@ app.get('/dynamic', (req, res) => {
     </html>
     `;
     res.send(output);
-})
+});
+
 app.get('/route', (req, res) => {
     res.send('Hello Router, <img src="/route.png">');
 });
